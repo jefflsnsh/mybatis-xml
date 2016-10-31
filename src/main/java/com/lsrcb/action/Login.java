@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by Administrator on 2016-10-30.
  */
 @Controller
-
+@ResponseBody
 public class Login {
     @RequestMapping("/views/index.do")
     public User Login( User user)

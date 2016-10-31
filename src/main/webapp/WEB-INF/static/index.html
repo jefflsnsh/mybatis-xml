@@ -21,6 +21,7 @@
        });
        function submitForm(){
            $("#ff").submit();
+           return false;
        }
 
     </script>
@@ -33,16 +34,16 @@
                 <table cellpadding="5">
                     <tr>
                         <td>用户名：</td>
-                        <td><input class="easyui-textbox" type="text" name="username" data-options="required:true"></input>
+                        <td><input class="easyui-textbox" type="text" name="username" data-options="required:true"/>
                         </td>
                     </tr>
                     <tr>
                         <td>密码：</td>
                         <td><input class="easyui-textbox" type="password" name="password"
-                                   data-options="required:true,validType:'password'"></input></td>
+                                   data-options="required:true,validType:'password'"/></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="登录" ></input></td>
+                        <td><input type="submit" value="登录" onsubmit="submitForm()" /></td>
                     </tr>
                 </table>
             </form>
