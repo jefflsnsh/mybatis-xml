@@ -17,6 +17,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @ResponseBody
 public class Login {
+    public SqlSessionTemplate getSqlSession() {
+        return sqlSession;
+    }
+
+    public void setSqlSession(SqlSessionTemplate sqlSession) {
+        this.sqlSession = sqlSession;
+    }
+
     @Autowired
     private SqlSessionTemplate sqlSession;
     @RequestMapping("/views/index.do")

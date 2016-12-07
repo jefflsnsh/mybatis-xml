@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="DB2 (LUW) - odshis@32.172.32.115" uuid="b4cd7fc8-2a49-43c1-99e7-b5763bede50a">
+      <database-info product="DB2/LINUXX8664" version="SQL09070" jdbc-version="4.0" driver-name="IBM Data Server Driver for JDBC and SQLJ" driver-version="4.7.85">
+        <extra-name-characters>@#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>his</user-name>
+      <resolve-scope>:HIS</resolve-scope>
+    </data-source>
+  </component>
+</project>
