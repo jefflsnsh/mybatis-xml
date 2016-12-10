@@ -1,7 +1,8 @@
 package com.lsrcb.action;
 
 import com.lsnsh.bean.User;
-import com.lsnsh.dao.testdao;
+import com.lsnsh.dao.TestDao;
+import com.lsnsh.dao.TestDao;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,22 +18,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @ResponseBody
 public class Login {
-    public SqlSessionTemplate getSqlSession() {
-        return sqlSession;
+
+
+    public void setTestDao(TestDao testDao) {
+        this.testDao = testDao;
     }
 
-    public void setSqlSession(SqlSessionTemplate sqlSession) {
-        this.sqlSession = sqlSession;
+    public TestDao getTestDao() {
+        return testDao;
     }
 
     @Autowired
-    private SqlSessionTemplate sqlSession;
+
+    private TestDao testDao;
     @RequestMapping("/views/index.do")
     public User Login( User user)
     {
 
-        testdao ts =sqlSession.getMapper(testdao.class);
-        System.out.print(ts.selectAcctByNo());
+
+        System.out.print(testDao.selectAcctByNo());
         return user;
     }
 
